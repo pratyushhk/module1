@@ -24,3 +24,16 @@ ORDER BY trip_distance DESC
 LIMIT 1;
 
 ANSWER: Day: 2025-11-14, Trip_distance: 88.03
+
+# Question 5
+
+SELECT z."Zone"
+FROM zones_data z
+JOIN green_taxi_data g
+ON z."LocationID" = g."PULocationID"
+WHERE g.lpep_pickup_datetime::date = '2025-11-18'
+GROUP BY z."Zone"
+ORDER BY SUM(trip_distance) DESC
+LIMIT 1; 
+
+Answer: East Harlem North

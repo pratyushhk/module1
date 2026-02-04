@@ -1,0 +1,8 @@
+docker run -it --rm\
+    --network=assignment_default \
+    sqlquery \
+    --pg-user=root \
+    --pg-pass=root \
+    --pg-host=pgdatabase \
+    --pg-port=5432 \
+    --pg-db=taxi 
